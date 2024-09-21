@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Data</h1>
+    <p><strong>Name:</strong> <span id="displayName"></span></p>
+    <p><strong>Title:</strong> <span id="displayTitle"></span></p>
+    <p><strong>Address:</strong> <span id="displayAddress"></span></p>
+    <p><strong>Gender:</strong> <span id="displayGender"></span></p>
+    <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+    <p><strong>Mobile:</strong> <span id="displayMobile"></span></p>
+
+    <script>
+        document.getElementById('displayName').textContent = localStorage.getItem('name') || 'N/A';
+        document.getElementById('displayTitle').textContent = localStorage.getItem('title') || 'N/A';
+        document.getElementById('displayAddress').textContent = localStorage.getItem('address') || 'N/A';
+        document.getElementById('displayGender').textContent = localStorage.getItem('gender') || 'N/A';
+        document.getElementById('displayEmail').textContent = localStorage.getItem('email') || 'N/A';
+        document.getElementById('displayMobile').textContent = localStorage.getItem('mobile') || 'N/A';
+    </script>
+</body>
+</html>
